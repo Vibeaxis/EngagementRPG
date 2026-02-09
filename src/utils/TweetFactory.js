@@ -1,6 +1,5 @@
 // src/utils/TweetFactory.js
 
-// 1. DATA POOLS (Moved inside to prevent ReferenceErrors)
 const DOOMER_POOL = [
   "The planet is literally on fire and I'm here arguing about a subscription badge.",
   "The peak of human civilization was 2005. Everything else is DLC.",
@@ -33,24 +32,59 @@ const BRAIN_ROT_POOL = [
   "Error: Personality not found. Loading 'Controversial Take' instead."
 ];
 
-// 2. THE GENERATOR
+// --- NEW ADDITIONS ---
+
+const PUNDIT_POOL = [
+  "Thread: Why this 14-second clip of a park bench proves the economy is collapsing. 1/45",
+  "The mainstream media won't tell you about this, but I will for $8 a month.",
+  "Big if true. Concerning. Looking into this.",
+  "Does anyone else feel like the reality setting on the simulation got turned up to 11?",
+  "I am once again asking you to ignore the facts and focus on my feelings."
+];
+
+const HUSTLE_POOL = [
+  "If you aren't waking up at 2 AM to stare at the sun, you're already behind.",
+  "I replaced my blood with espresso and my dreams with spreadsheets. Level up.",
+  "Your 9-5 is my 9-5... except mine is AM to AM. We are not the same.",
+  "Don't go to college. Buy my course on how to sell courses about not going to college.",
+  "Comfort is a slow death. Sleep on a bed of nails for maximum ROI."
+];
+
+const AI_DOOMSAYER_POOL = [
+  "I just saw an LLM write a poem that made me cry. The end is near.",
+  "If you can't tell the difference between a bot and your mom, does it even matter?",
+  "The Turing test is obsolete. We need a 'Soul Test' for 2026.",
+  "Currently teaching my toaster how to feel regret. Progress is slow.",
+  "I, for one, welcome our new algorithmic overlords."
+];
+
+// 2. THE GENERATOR (Updated Roll Logic)
 export const generateArchetypeTweet = () => {
   const roll = Math.random();
   let pool;
   let voice;
 
-  if (roll < 0.25) {
+  if (roll < 0.15) {
     pool = DOOMER_POOL;
     voice = "Doomer";
-  } else if (roll < 0.50) {
+  } else if (roll < 0.30) {
     pool = TECH_OPTIMIST_POOL;
     voice = "Optimist";
-  } else if (roll < 0.75) {
+  } else if (roll < 0.45) {
     pool = CHRONIC_SCROLLER_POOL;
     voice = "Scroller";
-  } else {
+  } else if (roll < 0.60) {
     pool = BRAIN_ROT_POOL;
     voice = "BrainRot";
+  } else if (roll < 0.75) {
+    pool = PUNDIT_POOL;
+    voice = "Pundit";
+  } else if (roll < 0.90) {
+    pool = HUSTLE_POOL;
+    voice = "Hustle";
+  } else {
+    pool = AI_DOOMSAYER_POOL;
+    voice = "AIDoomsayer";
   }
 
   const text = pool[Math.floor(Math.random() * pool.length)];
