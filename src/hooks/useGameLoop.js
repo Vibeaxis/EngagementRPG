@@ -22,7 +22,7 @@ import {
 import { generateGrobTweet } from '@/utils/GrobData';
 import { generateAdTweet } from '@/utils/AdData';
 import { generateCelebrityTweet } from '@/utils/CelebrityData';
-
+import { generateArchetypeTweet } from '@/utils/TweetFactory';
 const TOPICS = ['Drama', 'Celebrity', 'Tech', 'Politics', 'Meme', 'Crypto'];
 
 function useGameLoop() {
