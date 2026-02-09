@@ -97,7 +97,52 @@ export const generateRealUserText = () => {
     "Decentralized everything. Except my anxiety.",
     "This tweet will age poorly. I'm aware.",
     "Why is everyone screaming?",
-    "Just minted a new NFT of my despair."
+    "Just minted a new NFT of my despair.",
+    // --- The "X" Meta & Platform Humor ---
+    "Is this app even working or am I just shouting into the void?",
+    "Every day I log on and choose violence. It’s a lifestyle.",
+    "Another day, another psyop.",
+    "The block list is looking healthy today. Nature is healing.",
+    "My timeline is just people I hate talking about things I don't care about.",
+    "I miss when the bird was blue. Now everything is just... dark.",
+    "How is this app still free?",
+    "If I don't get 50 likes on this, I'm deleting my account.",
+
+    // --- The Hustle & Tech Bro Brainrot ---
+    "I don't have friends, I have strategic partnerships.",
+    "Your 9-5 is my warm-up. Let’s get it.",
+    "Currently optimizing my sleep for 2.4% more efficiency.",
+    "If you aren't thinking in 50-year cycles, you're behind.",
+    "Just raised $2M for an app that tells you if it's raining. Scalable.",
+    "Stop asking for permission. Just ship it.",
+    "Coffee is just liquid capital. I drink 8 cups a day.",
+    "I’m not a founder, I’m a ‘Human Capital Allocator’.",
+
+    // --- The Doomer / Absurdist ---
+    "Entropy is the only constant. Anyway, what's for lunch?",
+    "The sun will eventually engulf the earth. Follow for more life hacks.",
+    "We are living in a simulation and the player is clearly bored.",
+    "Don't worry, nothing is under control.",
+    "I've spent $40 on DoorDash today. I am the problem.",
+    "Every year is just the previous year in a worse costume.",
+    "I'm not lazy, I'm just in 'power-saving' mode.",
+
+    // --- The "Reply Guy" Specials ---
+    "Interesting. Have you considered the socio-economic implications of that?",
+    "Big if true.",
+    "Actually, per the community notes guidelines, you are wrong.",
+    "Who is still paying for a blue check? Oh wait, I am.",
+    "L + Ratio + No Battery + You're a bot.",
+    "This is why we can't have nice things.",
+
+    // --- Random Vibe Checks ---
+    "POV: You're watching me ruin my life for 5 seconds of clout.",
+    "Does anyone else smell burnt toast or is it just the discourse?",
+    "My personality is 40% memes and 60% caffeine.",
+    "I would agree with you, but then we’d both be wrong.",
+    "Nature is beautiful. I saw a picture of a tree today on my phone.",
+    "Is it too late to become a shepherd in the mountains?",
+    "I just want to be rich enough to not know what day of the week it is."
   ];
   return templates[Math.floor(Math.random() * templates.length)];
 };
