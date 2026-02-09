@@ -93,11 +93,16 @@ function useGameLoop() {
     const rand = Math.random() * 100;
     let authorType = "Real";
     
-    if (rand < botPercentage) {
+   if (rand < botPercentage) {
       const subRand = Math.random();
       if (subRand < 0.33) authorType = "Glowie";
       else if (subRand < 0.66) authorType = "PornBot";
       else authorType = "BrandAccount";
+    } else {
+      // 30% chance to be an "Archetype" voice, 70% to be your original "Real" user
+      if (Math.random() < 0.3) {
+        authorType = "Archetype";
+      }
     }
 
     let avatar, handle, content;
@@ -117,6 +122,13 @@ function useGameLoop() {
         avatar = generateBrandAvatar();
         handle = generateBrandHandle();
         content = generateBrandText();
+        break;
+        // NEW: The Archetype Branch
+      case "Archetype":
+        const archetype = generateArchetypeTweet();
+        avatar = generateRealUserAvatar(); // Uses standard human avatar
+        handle = generateRealUserHandle(); // Uses standard human handle
+        content = archetype.content;       // Uses new unhinged writing
         break;
       case "Real":
       default:
