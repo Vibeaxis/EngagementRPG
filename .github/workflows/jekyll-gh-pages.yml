@@ -31,13 +31,18 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          # This must match your Vite build output directory
-          path: 'dist/'
+          path: 'dist/' # Vite builds into the dist folder
 
   deploy:
     needs: build_site
     runs-on: ubuntu-latest
     environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
