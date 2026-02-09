@@ -1,3 +1,14 @@
+
+// src/utils/TweetFactory.js
+import { 
+  DOOMER_POOL, 
+  TECH_OPTIMIST_POOL, 
+  CHRONIC_SCROLLER_POOL, 
+  BRAIN_ROT_POOL 
+} from './TweetVoices'; // Make sure the path is correct!
+
+
+
 export const generateArchetypeTweet = () => {
   const roll = Math.random();
   let pool;
