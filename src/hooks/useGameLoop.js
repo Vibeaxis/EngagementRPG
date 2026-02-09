@@ -23,6 +23,7 @@ import { generateGrobTweet } from '@/utils/GrobData';
 import { generateAdTweet } from '@/utils/AdData';
 import { generateCelebrityTweet } from '@/utils/CelebrityData';
 import { generateArchetypeTweet } from '@/utils/TweetFactory';
+import { generateModularTweet } from '@/utils/ModularFactory';
 const TOPICS = ['Drama', 'Celebrity', 'Tech', 'Politics', 'Meme', 'Crypto'];
 
 function useGameLoop() {
@@ -102,6 +103,12 @@ function useGameLoop() {
       // 30% chance to be an "Archetype" voice, 70% to be your original "Real" user
       if (Math.random() < 0.3) {
         authorType = "Archetype";
+        } else {
+    // 20% chance: The Modular Chaos Engine (Infinite Variety)
+    const modular = generateModularTweet();
+    content = modular.content;
+    authorType = "Modular";
+
       }
     }
 
