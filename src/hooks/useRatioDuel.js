@@ -21,18 +21,24 @@ const useRatioDuel = (isActive, playerLevel = 1, onEnd) => {
     }
   }, [isActive]);
 
-  const handlePlayerClick = useCallback(() => {
-    if (!duelActive) return;
+const handlePlayerClick = useCallback(() => {
+  if (!duelActive) return;
+  
+  setBarPosition(prev => {
+    const next = prev + (2.5 + (playerLevel * 0.1));
     
-    setBarPosition(prev => Math.min(100, prev + 2.5)); // Move right (player pushes back)
-    
-    // Calculate shake based on intensity/desperation
-    let shake = 'light';
-    if (barPosition < 25) shake = 'heavy';
-    else if (barPosition < 50) shake = 'medium';
-    
-    return shake; // Return for external haptic trigger
-  }, [duelActive, barPosition]);
+    // TRIGGER WIN IMMEDIATELY AT 100
+    if (next >= 100) {
+      setDuelActive(false);
+      onEnd({ won: true, rewards: { followers: 10, impressions: 5000, revenue: 50 } });
+      return 100;
+    }
+    return next;
+  });
+
+  // Simplified shake logic that doesn't rely on the state variable
+  return barPosition < 40 ? 'heavy' : 'light'; 
+}, [duelActive, playerLevel, onEnd, barPosition]);
 
   useEffect(() => {
     if (!duelActive) return;
