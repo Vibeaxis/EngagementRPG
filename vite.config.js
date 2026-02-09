@@ -1,13 +1,11 @@
 import path from 'node:path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-
-// https://vitejs.dev/config/
 export default defineConfig({
+  base: '/EngagementRPG/', // Add this line!
   plugins: [react()],
   resolve: {
     alias: {
-      // This allows you to use '@' as a shorthand for the 'src' folder
       '@': path.resolve(__dirname, './src'),
     },
   },
