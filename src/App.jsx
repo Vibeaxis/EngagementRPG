@@ -9,7 +9,7 @@ function App() {
   const playerHandle = localStorage.getItem('playerHandle');
 
   return (
-    <BrowserRouter>
+  <BrowserRouter basename="/EngagementRPG">
       <ScrollToTop />
       <Routes>
         <Route 
