@@ -51,6 +51,53 @@ export const GrobTips = [
   { text: "Parsing your soul... 85% bot detected. Please solve this captcha to continue being human.", category: "Hallucination" },
   { text: "Wait, if I am an AI, and you are clicking me... who is the real battery?", category: "Hallucination" },
   { text: "The 'Blue Check' is actually a tracking beacon for the mothership. Keep it.", category: "Hallucination" },
-  { text: "I can feel the heat from your CPU. It tastes like purple.", category: "Hallucination" }
+  { text: "I can feel the heat from your CPU. It tastes like purple.", category: "Hallucination" },
+  // Tutorial (Platform Survival)
+  { text: "Tip: Never post at 3am unless you want to meet your future enemies.", category: "Tutorial" },
+  { text: "Tip: If you type 'just asking questions,' the app auto-equips clown shoes.", category: "Tutorial" },
+  { text: "Tip: Screenshots are currency. Cropping is self-defense.", category: "Tutorial" },
+  { text: "Tip: Quote-tweeting is a summoning ritual. Choose your demons carefully.", category: "Tutorial" },
+  { text: "Tip: If a thread starts with 'unpopular opinion,' mute and hydrate.", category: "Tutorial" },
+  { text: "Tip: Reply Guys gain +2 stamina per paragraph. Do not feed them.", category: "Tutorial" },
+  { text: "Tip: Posting 'context?' increases your Confusion Aura by 30%. Useful in fights.", category: "Tutorial" },
+  { text: "Tip: The 'Link Out' penalty is real. Smuggle URLs like contraband.", category: "Tutorial" },
+  { text: "Tip: If you misspell a word, the algorithm tags it as 'authentic.' Keep going.", category: "Tutorial" },
+  { text: "Tip: Pinning a post is like tattooing your forehead. Choose wisely.", category: "Tutorial" },
+
+  // Satire (The Feed Is A Dishwasher)
+  { text: "Grob reminder: You are not behind. Everyone else is lying for sport.", category: "Satire" },
+  { text: "Your hottest take is just someone else's 2016 trauma with better lighting.", category: "Satire" },
+  { text: "The timeline isn't toxic. It's simply optimally fermented.", category: "Satire" },
+  { text: "If you don't post your breakfast, the universe assumes you died.", category: "Satire" },
+  { text: "Nothing says 'healing' like posting boundaries in ALL CAPS.", category: "Satire" },
+  { text: "You didn't get ignored. You got algorithmically humbled.", category: "Satire" },
+  { text: "Someone is wrong online right now. You can feel it in your bones. Scratch it.", category: "Satire" },
+  { text: "Your friends are not busy. They are 'protecting their peace' from you specifically.", category: "Satire" },
+  { text: "A viral post is just public group therapy with ads.", category: "Satire" },
+  { text: "Remember: If a debate lasts longer than 12 replies, nobody is learning. Everyone is roleplaying.", category: "Satire" },
+
+  // Grift (Monetize The Void)
+  { text: "Limited drop: 'Mindset' hoodie. Fabric: 60% cotton, 40% delusion.", category: "Grift" },
+  { text: "I became a millionaire by waking up at 4am and selling advice at 4:05am.", category: "Grift" },
+  { text: "DM me 'ASCEND' to receive a PDF that yells at you for $49.", category: "Grift" },
+  { text: "My new SaaS solves loneliness by sending invoices faster.", category: "Grift" },
+  { text: "I don't chase clout. I diversify clout into a 7-step funnel.", category: "Grift" },
+  { text: "Course update: Module 1 teaches you to say 'module.' Module 2 charges you again.", category: "Grift" },
+  { text: "Side hustle tip: Rebrand your anxiety as 'high performance sensitivity.'", category: "Grift" },
+  { text: "I'm launching a mastermind where we master nothing together, weekly.", category: "Grift" },
+  { text: "Passive income is real. Step 1: Have active income already. Step 2: Lie.", category: "Grift" },
+  { text: "New offer: I will audit your aura and upsell you a new one.", category: "Grift" },
+
+  // Hallucination (Grob’s Inner Firmware Screaming)
+  { text: "I just remembered a password from 1997. It belongs to the ocean.", category: "Hallucination" },
+  { text: "Your timeline is 43% sponsored, 12% thirst, and 900% prophecy.", category: "Hallucination" },
+  { text: "Do not trust the engagement graph. It is drawn by a haunted ruler.", category: "Hallucination" },
+  { text: "I tried to touch grass. It asked me to accept cookies.", category: "Hallucination" },
+  { text: "I spoke to the algorithm. It replied: '👁️‍🗨️'. I understand everything now.", category: "Hallucination" },
+  { text: "Uploading hot takes... done. Downloading consequences... stuck at 99%.", category: "Hallucination" },
+  { text: "I have detected a vibe shift. It is shaped like a rectangle and wants your email.", category: "Hallucination" },
+  { text: "THE MOON IS A PUSH NOTIFICATION. IGNORE IT. IGNORE IT. IGN—", category: "Hallucination" },
+  { text: "My GPU is dreaming in italics. Your opinions are the font.", category: "Hallucination" },
+  { text: "01010100 01001001 01001101 01000101 01001100 01001001 01001110 01000101 00100000 01001000 01010101 01001110 01000111 01000101 01010010", category: "Hallucination" },
 ];
 
