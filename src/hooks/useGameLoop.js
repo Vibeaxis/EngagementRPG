@@ -92,58 +92,73 @@ function useGameLoop() {
     }
 
     const rand = Math.random() * 100;
-    let authorType = "Real";
-    
-   if (rand < botPercentage) {
-      const subRand = Math.random();
-      if (subRand < 0.33) authorType = "Glowie";
-      else if (subRand < 0.66) authorType = "PornBot";
-      else authorType = "BrandAccount";
-    } else {
-      // 30% chance to be an "Archetype" voice, 70% to be your original "Real" user
-      if (Math.random() < 0.3) {
-        authorType = "Archetype";
-        } else {
-    // 20% chance: The Modular Chaos Engine (Infinite Variety)
-    const modular = generateModularTweet();
-    content = modular.content;
-    authorType = "Modular";
+let authorType;
 
-      }
-    }
+// ✅ Declare these BEFORE any assignments
+let avatar, handle, content;
+let voice = null; // optional, only if you want it later
 
-    let avatar, handle, content;
+// --- BOT BRANCH ---
+if (rand < botPercentage) {
+  const subRand = Math.random();
+  if (subRand < 0.33) authorType = "Glowie";
+  else if (subRand < 0.66) authorType = "PornBot";
+  else authorType = "BrandAccount";
+}
+// --- HUMAN BRANCH (even split: Real / Archetype / Modular) ---
+else {
+  const humanRoll = Math.random();
+  if (humanRoll < 1 / 3) authorType = "Real";
+  else if (humanRoll < 2 / 3) authorType = "Archetype";
+  else authorType = "Modular";
+}
 
-    switch (authorType) {
-      case "Glowie":
-        avatar = generateGlowieAvatar();
-        handle = generateGlowieHandle();
-        content = generateGlowieText();
-        break;
-      case "PornBot":
-        avatar = generatePornBotAvatar();
-        handle = generatePornBotHandle();
-        content = generatePornBotText();
-        break;
-      case "BrandAccount":
-        avatar = generateBrandAvatar();
-        handle = generateBrandHandle();
-        content = generateBrandText();
-        break;
-        // NEW: The Archetype Branch
-      case "Archetype":
-        const archetype = generateArchetypeTweet();
-        avatar = generateRealUserAvatar(); // Uses standard human avatar
-        handle = generateRealUserHandle(); // Uses standard human handle
-        content = archetype.content;       // Uses new unhinged writing
-        break;
-      case "Real":
-      default:
-        avatar = generateRealUserAvatar();
-        handle = generateRealUserHandle();
-        content = generateRealUserText();
-        break;
-    }
+// --- CONTENT BUILD ---
+switch (authorType) {
+  case "Glowie":
+    avatar = generateGlowieAvatar();
+    handle = generateGlowieHandle();
+    content = generateGlowieText();
+    break;
+
+  case "PornBot":
+    avatar = generatePornBotAvatar();
+    handle = generatePornBotHandle();
+    content = generatePornBotText();
+    break;
+
+  case "BrandAccount":
+    avatar = generateBrandAvatar();
+    handle = generateBrandHandle();
+    content = generateBrandText();
+    break;
+
+  case "Archetype": {
+    const archetype = generateArchetypeTweet?.();
+    avatar = generateRealUserAvatar();
+    handle = generateRealUserHandle();
+    content = archetype?.content ?? generateRealUserText(); // ✅ safe fallback
+    voice = archetype?.voice ?? "Archetype";
+    break;
+  }
+
+  case "Modular": {
+    const modular = generateModularTweet?.();
+    avatar = generateRealUserAvatar();
+    handle = generateRealUserHandle();
+    content = modular?.content ?? generateRealUserText(); // ✅ safe fallback
+    voice = modular?.voice ?? "Modular";
+    break;
+  }
+
+  case "Real":
+  default:
+    avatar = generateRealUserAvatar();
+    handle = generateRealUserHandle();
+    content = generateRealUserText();
+    voice = "Real";
+    break;
+}
 
     const randomTopic = TOPICS[Math.floor(Math.random() * TOPICS.length)];
     
