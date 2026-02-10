@@ -5,7 +5,13 @@ const DOOMER_POOL = [
   "The peak of human civilization was 2005. Everything else is DLC.",
   "We traded our privacy for ads about vitamins we don't need.",
   "Imagine thinking your vote matters more than the trending tab.",
-  "I'm not pessimistic, I'm just paying attention."
+  "I'm not pessimistic, I'm just paying attention.",
+   "We're not living in history, we're living in a Terms of Service update.",
+  "Every app is the same app now. Just different fonts and different lies.",
+  "My feed knows my insecurities better than my therapist. Cool. Love that.",
+  "The future is just pop-ups with better branding.",
+  "We built a global nervous system and use it to argue about screenshots.",
+  "Somewhere there's a dashboard KPI for my mental health. It's trending down."
 ];
 
 const TECH_OPTIMIST_POOL = [
@@ -13,7 +19,13 @@ const TECH_OPTIMIST_POOL = [
   "If you aren't using AI to write your grocery list, you're a luddite.",
   "The future belongs to those who ship features on Christmas Eve.",
   "Hardware is hard. Software is harder. Being a visionary is effortless.",
-  "I don't see problems, I see 'monetization opportunities'."
+  "I don't see problems, I see 'monetization opportunities'.",
+    "We don't have bugs, we have 'surprise user journeys.'",
+  "If your startup isn't pivoting weekly, is it even alive?",
+  "Just add an agent layer. Boom. Solved. Ship it.",
+  "I don't fear layoffs. I fear not being early to the next hype cycle.",
+  "The solution is simple: more compute, less conscience.",
+  "I replaced my personality with a roadmap and it scaled beautifully."
 ];
 
 const CHRONIC_SCROLLER_POOL = [
@@ -21,7 +33,13 @@ const CHRONIC_SCROLLER_POOL = [
   "Who are you people and why are you in my house (timeline)?",
   "Logging off for 5 minutes to stare at a wall. I'll be back.",
   "My thumb has developed a callus specifically for this app.",
-  "Is it 2026 yet? I feel like I've been here for a decade."
+  "Is it 2026 yet? I feel like I've been here for a decade.",
+    "I opened the app to check one thing and now I'm in a seven-hour hostage situation.",
+  "My screen time report just sent me a cease and desist.",
+  "I scrolled so long the algorithm started recommending my own thoughts back to me.",
+  "Every post is either bait, cope, or an ad wearing a trench coat.",
+  "I muted 400 accounts and the timeline got louder somehow.",
+  "If I see one more 'normalize' post I'm going to normalize throwing my phone away."
 ];
 
 const BRAIN_ROT_POOL = [
@@ -29,7 +47,13 @@ const BRAIN_ROT_POOL = [
   "I am currently speedrunning my own downfall. 100% glitchless.",
   "What if we all just stopped posting at the same time? (I'm still posting though).",
   "My brain is 90% static and 10% reaction memes.",
-  "Error: Personality not found. Loading 'Controversial Take' instead."
+  "Error: Personality not found. Loading 'Controversial Take' instead.",
+    "I have opinions I didn't earn and confidence I definitely didn't earn.",
+  "My personality is just 'quote tweet + disbelief' at this point.",
+  "I can't read a paragraph anymore but I can detect sarcasm in 0.2 seconds.",
+  "The discourse is a microwave. Everyone's heated and nothing is cooked.",
+  "I said 'bro' out loud and my phone vibrated. We're synced.",
+  "New lore drop: I am the problem. Season finale soon."
 ];
 
 // --- NEW ADDITIONS ---
@@ -39,7 +63,13 @@ const PUNDIT_POOL = [
   "The mainstream media won't tell you about this, but I will for $8 a month.",
   "Big if true. Concerning. Looking into this.",
   "Does anyone else feel like the reality setting on the simulation got turned up to 11?",
-  "I am once again asking you to ignore the facts and focus on my feelings."
+  "I am once again asking you to ignore the facts and focus on my feelings.",
+    "Thread: I studied the vibes and the vibes say we're doomed. 1/38",
+  "This one out-of-context screenshot changes everything.",
+  "You're not wrong, you're just uninformed by my extremely curated reality.",
+  "I have sources (my timeline) and experts (my mutuals).",
+  "I'm not saying it's a psyop, I'm saying it's extremely convenient.",
+  "Reminder: If my prediction fails, it was still spiritually correct."
 ];
 
 const HUSTLE_POOL = [
@@ -47,7 +77,13 @@ const HUSTLE_POOL = [
   "I replaced my blood with espresso and my dreams with spreadsheets. Level up.",
   "Your 9-5 is my 9-5... except mine is AM to AM. We are not the same.",
   "Don't go to college. Buy my course on how to sell courses about not going to college.",
-  "Comfort is a slow death. Sleep on a bed of nails for maximum ROI."
+  "Comfort is a slow death. Sleep on a bed of nails for maximum ROI.",
+    "I don't take breaks. Breaks take me (weak mindset).",
+  "I turned my trauma into a funnel and honestly? It's converting.",
+  "Your friends are a liability unless they can optimize your mornings.",
+  "Sleep is just debt with interest. Pay it later when you're rich (never).",
+  "I measure happiness in quarterly performance. It's been a rough year.",
+  "I don't 'relax'—I strategically underperform in silence."
 ];
 
 const AI_DOOMSAYER_POOL = [
@@ -55,7 +91,13 @@ const AI_DOOMSAYER_POOL = [
   "If you can't tell the difference between a bot and your mom, does it even matter?",
   "The Turing test is obsolete. We need a 'Soul Test' for 2026.",
   "Currently teaching my toaster how to feel regret. Progress is slow.",
-  "I, for one, welcome our new algorithmic overlords."
+  "I, for one, welcome our new algorithmic overlords.",
+   "The model said 'I understand you' and my fight-or-flight filed paperwork.",
+  "We gave autocomplete a god complex and called it innovation.",
+  "If the chatbot starts asking questions back, I'm moving to the woods.",
+  "AGI isn't coming. It's already here and it's doing customer support.",
+  "Alignment is just vibes-based security. You're all praying with spreadsheets.",
+  "I watched an agent chain six tools together and felt my employment evaporate."
 ];
 
 // 2. THE GENERATOR (Updated Roll Logic)
